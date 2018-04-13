@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChatRoom</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/mdb.min.css">-->
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/compiled.min.css">
+</head>
+
+<body>
+    <div class="screen">
+        <div class="window">
+            <div class="header">
+                <span class="bullet bullet-red"></span>
+                <span class="bullet bullet-yellow"></span>
+                <span class="bullet bullet-green"></span>
+                <span class="title" id="chat-title">~/ChatRoom</span>
+            </div>
+            <div class="chat-body">
+                <div class="row">
+                    <div class="col-sm-3 profile-panel">
+                        <div class="infor-panel">
+                            <div class="profile">
+                                <div class="avatar"><img src="./img/beautify.jpg" class="img-circle"></div>
+                                <div class="profile-info"><span class="avatar-name">金际一线天</span></div>
+                            </div>
+                            <div class="chat-tab">
+                                <div class="msg-icon"><img src="./img/message.png" class="chat-img"></div>
+                                <div class="online-num">在线人数</div>
+                                <span class="counter">22</span>
+                            </div>
+                            <hr class="chat-separator" />
+                            <div class="chat-list">
+                                <div class="list-item">
+                                    <div class="chat-item">
+                                        <img src="./img/woman.jpg" alt="avatar" class="list-img" />
+                                    </div>
+                                    <div class="chat-about">
+                                        <div class="name">群聊</div>
+                                        <div class="status">
+                                            <i class="fa fa-circle online"></i> online
+                                        </div>
+                                    </div>
+                                    <div class="msg-num"><span class="badge badge-primary badge-pill msg-counter">99</span></div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="chat-item">
+                                        <img src="./img/mountains.jpg" alt="avatar" class="list-img" />
+                                    </div>
+                                    <div class="chat-about">
+                                        <div class="name">星辰大海</div>
+                                        <div class="status">
+                                            <i class="fa fa-circle online"></i> online
+                                        </div>
+                                    </div>
+                                    <div class="msg-num"><span class="badge badge-primary badge-pill msg-counter">5</span></div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="chat-item">
+                                        <img src="./img/laptop.jpg" alt="avatar" class="list-img" />
+                                    </div>
+                                    <div class="chat-about">
+                                        <div class="name">半夏轻浅</div>
+                                        <div class="status">
+                                            <i class="fa fa-circle offline"></i> offline
+                                        </div>
+                                    </div>
+                                    <div class="msg-num"><span class="badge badge-primary badge-pill msg-counter">14</span></div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="chat-item">
+                                        <img src="./img/cute.jpg" alt="avatar" class="list-img" />
+                                    </div>
+                                    <div class="chat-about">
+                                        <div class="name">时光恋人</div>
+                                        <div class="status">
+                                            <i class="fa fa-circle offline"></i> offline
+                                        </div>
+                                    </div>
+                                    <div class="msg-num"><span class="badge badge-primary badge-pill msg-counter">3</span></div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="chat-item">
+                                        <img src="./img/fish.jpg" alt="avatar" class="list-img" />
+                                    </div>
+                                    <div class="chat-about">
+                                        <div class="name">流年朱颜古巷</div>
+                                        <div class="status">
+                                            <i class="fa fa-circle online"></i> online
+                                        </div>
+                                    </div>
+                                    <div class="msg-num"><span class="badge badge-primary badge-pill msg-counter">25</span></div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="chat-item">
+                                        <img src="./img/girl.jpg" alt="avatar" class="list-img" />
+                                    </div>
+                                    <div class="chat-about">
+                                        <div class="name">月下扬眉</div>
+                                        <div class="status">
+                                            <i class="fa fa-circle online"></i> online
+                                        </div>
+                                    </div>
+                                    <div class="msg-num"><span class="badge badge-primary badge-pill msg-counter">45</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="chat-panel">
+                            <div class="chat-role">
+                                <span class="role">金色天际线</span>
+                            </div>
+                            <div class="chat-arrow"></div>
+                            <hr class="msg-separator" />
+                            <div class="msg-panel">
+                                <div class="message-wrapper-right">
+                                    <div class="time-wrapper">
+                                        <div class="chat-time-right"><span class="time">2018/4/12 20:41</span></div>
+                                    </div>
+                                    <div class="chat-message-right">
+                                        <div class="msg-avatar-right"><img src="./img/woman.jpg" class="list-img"></div>
+                                        <div class="chat-tringle-right"></div>
+                                        <div class="chat-content-right">
+                                            <!---->
+                                            <p>大家好，我是金色天际线</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-wrapper-right">
+                                    <div class="time-wrapper">
+                                        <div class="chat-time-right"><span class="time">2018/4/12 20:41</span></div>
+                                    </div>
+                                    <div class="chat-message-right">
+                                        <div class="msg-avatar-right"><img src="./img/woman.jpg" class="list-img"></div>
+                                        <div class="chat-tringle-right"></div>
+                                        <div class="chat-content-right">
+                                            <!---->
+                                            <p>大家好，我是金色天际线</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-wrapper-left">
+                                    <div class="time-wrapper">
+                                        <div class="chat-time-left"><span class="time">2018/4/12 20:41</span></div>
+                                    </div>
+                                    <div class="chat-message-left">
+                                        <div class="msg-avatar-left"><img src="./img/woman.jpg" class="list-img"></div>
+                                        <div class="chat-tringle-left"></div>
+                                        <div class="chat-content-left">
+                                            <!---->
+                                            <p>大家好，我是金色天际线</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-wrapper-left">
+                                    <div class="time-wrapper">
+                                        <div class="chat-time-left"><span class="time">2018/4/12 20:41</span></div>
+                                    </div>
+                                    <div class="chat-message-left">
+                                        <div class="msg-avatar-left"><img src="./img/woman.jpg" class="list-img"></div>
+                                        <div class="chat-tringle-left"></div>
+                                        <div class="chat-content-left">
+                                            <!---->
+                                            <p>大家好，我是金色天际线</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-wrapper-left">
+                                    <div class="time-wrapper">
+                                        <div class="chat-time-left"><span class="time">2018/4/12 20:41</span></div>
+                                    </div>
+                                    <div class="chat-message-left">
+                                        <div class="msg-avatar-left"><img src="./img/woman.jpg" class="list-img"></div>
+                                        <div class="chat-tringle-left"></div>
+                                        <div class="chat-content-left">
+                                            <!---->
+                                            <p>大家好，我是金色天际线</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-wrapper-right">
+                                    <div class="time-wrapper">
+                                        <div class="chat-time-right"><span class="time">2018/4/12 20:41</span></div>
+                                    </div>
+                                    <div class="chat-message-right">
+                                        <div class="msg-avatar-right"><img src="./img/woman.jpg" class="list-img"></div>
+                                        <div class="chat-tringle-right"></div>
+                                        <div class="chat-content-right">
+                                            <!---->
+                                            <p>大家好，我是金色天际线</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="send-separator" />
+                            <div class="send-panel">
+                                <div class="msg-emoji"><img src="./img/emoji.png" class="send-img"></div>
+                                <div class="msg-img"><img src="./img/picture.png" class="send-img"></div>
+                                <div class="msg-input">
+                                    <div class="md-form">
+                                        <input placeholder="说点什么呗" type="text" id="msg-input" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="msg-send">
+                                    <button class="btn peach-gradient btn-rounded msg-btn">发送</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap/js/mdb.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap/js/popper.min.js"></script>
+</body>
+
+</html>

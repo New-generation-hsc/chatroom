@@ -1,0 +1,348 @@
+
+.window {
+	border: 1px solid rgb(195, 195, 195);
+	width: 1000px;
+	border-radius: 4px;
+	box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.11);
+	text-align: left;
+	vertical-align: top;
+	animation: zoom 500ms;
+	-webkit-animation: zoom 500ms;
+	height: 646px;
+}
+
+.window .header {
+	padding: 2px 9px 0;
+	line-height: 30px;
+	vertical-align: top;
+	background: #E8E8E8;
+}
+
+.window .header .title {
+  font: 11px "Myriad Pro", "Arial";
+}
+
+.window .header .title {
+  text-align: center;
+  display: inline-block;
+  width: 800px;
+  color: #766F79;
+  vertical-align: middle;
+  margin: 0 0 0 0;
+}
+
+.window .bullet {
+  height: 11px;
+  width: 11px;
+  display: inline-block;
+  background: #ccc;
+  border-radius: 100%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.window .bullet-red {
+  background: #DF7065;
+}
+
+.window .bullet-yellow {
+  background: #E6BB46;
+}
+
+.window .bullet-green {
+  background: #5BCC8B;
+}
+
+.profile-panel {
+	height: 614px;
+	background: #dff0d8;
+}
+
+.img-circle {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+.profile {
+	margin: 18px 18px 10px 18px;
+}
+
+.profile .avatar {
+	display: inline-block;
+	height: 60px;
+}
+
+.profile .profile-info {
+	display: inline-block;
+	line-height: 50px;
+	text-align: left;
+	vertical-align: middle;
+	font: 23px "Myriad Pro", "Arial";
+	padding-left: 5px;
+}
+
+.chat-tab {
+	height: 40px;
+}
+
+.msg-icon {
+	width: 80px;
+	padding: 0 20px 0 20px;
+	display: inline-block;
+	border-right: 1px solid #00FFFF;
+}
+
+.msg-icon .chat-img {
+	width: 32px;
+	height: 32px;
+}
+
+.chat-tab .online-num {
+	display: inline-block;
+	width: 120px;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.chat-separator{
+	margin: 4px 0 0 0;
+}
+
+.chat-list {
+	height: 486px;
+	margin: 0 0 0 18px;
+}
+
+.list-img {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+}
+
+.list-item {
+	height: 64px;
+	border-bottom: 1px solid rgb(195, 195, 195);
+}
+
+.list-item .msg-num {
+	float: right;
+	text-align: center;
+	vertical-align: middle;
+	margin: 20px 20px 0 0;
+}
+
+.msg-num .msg-counter {
+	display: inline-block;
+}
+
+.chat-item {
+	float: left;
+}
+
+.chat-about {
+	float: left;
+	margin: 8px 0 8px 18px;
+}
+
+.chat-about .name {
+	text-align: left;
+	vertical-align: middle;
+	font: 15px "Myriad Pro", "Arial";
+	line-height: 24px;
+}
+
+.chat-about .status {
+	text-align: left;
+	vertical-align: middle;
+	font: 10px "Lato", Arial, sans-serif;
+	line-height: 24px;
+}
+
+.chat-item .list-img {
+	margin: 8px 0 0 0;
+}
+
+.chat-about .status .online, .chat-about .status .offline {
+	font-size: 10px;
+	margin: 0 0 0 8px;
+}
+
+.online {
+	color: green;
+}
+
+.offline {
+	color: orange;
+}
+
+.msg-separator {
+	margin: 0 0 4px 0;
+}
+
+.chat-role .role {
+	width: 741px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	display: inline-block;
+	margin: 5px 0 0 0;
+}
+
+.chat-arrow {
+    width: 0px;
+    height: 0px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #E8E8E8 transparent;
+    margin: 0 0 0 364px;
+}
+
+.chat-time-right {
+	width: 720px;
+	float: right;
+	text-align: right;
+	vertical-align: middle;
+	font: 12px "Myriad Pro", "Arial";
+	color: #F6D19B;
+	display: inline-block;
+	padding: 0 10px 10px 0;
+}
+
+.chat-time-left {
+	width: 720px;
+	float: left;
+	text-align: left;
+	vertical-align: middle;
+	font: 12px "Myriad Pro", "Arial";
+	color: #F6D19B;
+	display: inline-block;
+	padding: 0 20px 10px 0;
+}
+
+.chat-panel {
+	height: 614px;
+}
+
+.msg-panel {
+	height: 506px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.message-wrapper-right {
+	width: 720px;
+	height: 100px;
+}
+
+.message-wrapper-left {
+	width: 720px;
+	padding: 0 25px 0 0;
+	height: 100px;
+}
+
+.chat-message-right {
+	margin: 5px 20px 0 0;
+}
+
+.chat-message-left {
+	margin: 5px 0 0 0px;
+}
+
+.chat-message-right .msg-avatar-right {
+	float: right;
+}
+
+.chat-message-left .msg-avatar-left {
+	float: left;
+}
+
+.chat-message-right .chat-content-right {
+	height: 45px;
+	float: right;
+	background-color: #B4F342;
+	padding: 5px 10px 5px 10px;
+	margin: 0;
+	border-radius: 7px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.chat-message-left .chat-content-left {
+	height: 45px;
+	float: left;
+	background-color: #B4F342;
+	padding: 5px 10px 5px 10px;
+	margin: 0;
+	border-radius: 7px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.chat-message-right .chat-content-right p {
+	margin: 6px 0 0 0;
+	line-height: 18px;
+	font: 16px "Myriad Pro", "Arial";
+}
+
+.chat-message-left .chat-content-left p {
+	margin: 6px 0 0 0;
+	line-height: 18px;
+	font: 16px "Myriad Pro", "Arial";
+}
+
+.message-wrapper-right .chat-tringle-right {
+	width: 0px;
+    height: 0px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #B4F342;
+    float: right;
+    margin: 13px 0 10px 0;
+}
+
+.message-wrapper-left .chat-tringle-left {
+	width: 0px;
+    height: 0px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #B4F342 transparent transparent;
+    float: left;
+    margin: 13px 0 10px 0;
+}
+
+.chat-panel .send-separator {
+	margin: 0 0 5px 0;
+}
+
+.send-panel .msg-emoji, .send-panel .msg-img, .send-panel .msg-input, .send-panel .msg-send {
+	float: left;
+}
+
+.send-panel .send-img {
+	width: 32px;
+	height: 32px;
+}
+
+.send-panel .msg-emoji {
+	margin: 5px 0 0 10px;
+}
+
+.send-panel .msg-img {
+	margin: 5px 0 0 10px;
+}
+
+.msg-input .md-form {
+	margin: 0px;
+}
+
+.send-panel .msg-input {
+	margin: 0 0 0 20px;
+	width: 520px;
+}
+
+.msg-send .msg-btn {
+	margin: 0 0 0 20px;
+	padding: 10px 25px 10px 25px;
+}
