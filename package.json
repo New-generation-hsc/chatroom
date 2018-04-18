@@ -2,7 +2,7 @@
   "name": "chatroom",
   "version": "1.0.0",
   "description": "a small chatroom project, anyone can enter the room and chat with others or a specific person",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,10 @@
   "author": "greek",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "socket.io": "^2.1.0",
+    "uuid": "^3.2.1",
     "websocket.io": "^0.2.1"
   }
 }

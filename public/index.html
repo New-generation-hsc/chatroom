@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChatRoom</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./assets/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/lib/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/mdb.min.css">-->
+    <link rel="stylesheet" type="text/css" href="./assets/lib/bootstrap/css/compiled.min.css">
+    <script type="text/javascript" src="./assets/lib/angular.min.js"></script>
+</head>
+
+<body ng-app="chatRoom" ng-controller="chatCtrl">
+    <div class="screen">
+        <div class="window">
+            <div class="header">
+                <span class="bullet bullet-red"></span>
+                <span class="bullet bullet-yellow"></span>
+                <span class="bullet bullet-green"></span>
+                <span class="title" id="chat-title">~/ChatRoom</span>
+            </div>
+            <div class="chat-body">
+                <div class="row">
+                    <div class="col-sm-3 profile-panel">
+                        <div class="infor-panel">
+                            <div class="profile">
+                                <div class="avatar"><img src="{{ self.avatar }}" class="img-circle"></div>
+                                <div class="profile-info"><span class="avatar-name">{{ self.nickname }}</span></div>
+                            </div>
+                            <div class="chat-tab">
+                                <div class="msg-icon"><img src="./assets/img/message.png" class="chat-img"></div>
+                                <div class="online-num">在线人数</div>
+                                <span class="counter">{{ users.length - 1 }}</span>
+                            </div>
+                            <hr class="chat-separator" />
+                            <div class="chat-list">
+                                <div class="list-item {{receiver === user? 'active': ''}}" ng-repeat="user in users" ng-click="setReceiver(user)">
+                                    <div class="chat-item">
+                                        <img src="{{ user.avatar }}" alt="avatar" class="list-img" />
+                                    </div>
+                                    <div class="chat-about">
+                                        <div class="name">{{ user.nickname }}</div>
+                                        <div class="status">
+                                            <i class="fa fa-circle online"></i> online
+                                        </div>
+                                    </div>
+                                    <div class="msg-num"><span class="badge badge-primary badge-pill msg-counter">{{ user.hasMessages }}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="chat-panel">
+                            <div class="chat-role">
+                                <span class="role">{{ curreceiver }}</span>
+                            </div>
+                            <div class="chat-arrow"></div>
+                            <hr class="msg-separator" />
+                            <div class="msg-panel">
+                                <div ng-repeat="message in messages">
+                                    <div ng-switch on="message.type">
+                                        <div class="system-notification" ng-switch-when="join">
+                                            <span class="notification"><strong>系统:&nbsp;&nbsp;</strong><span class="notify-name">@{{ message.nickname }}</span>来啦,大家不要放过他~</span>
+                                        </div>
+                                        <div class="system-notification" ng-switch-when="exit">
+                                            <span class="notification"><strong>系统:&nbsp;&nbsp;</strong><span class="notify-name">@{{ message.nickname }}</span>退出，欢迎下次再来哦~</span>
+                                        </div>
+                                        <div class="message-wrapper-{{ message.position }}" ng-switch-when="normal">
+                                            <div class="time-wrapper">
+                                                <div class="chat-time-{{ message.position }}"><span class="time">{{ message.time | date:'yyyy/MM/dd HH:mm'}}</span></div>
+                                            </div>
+                                            <div class="chat-message-{{ message.position }}">
+                                                <div class="msg-avatar-{{ message.position }}"><img src="{{ message.from.avatar }}" class="list-img"></div>
+                                                <div class="chat-tringle-{{ message.position }}"></div>
+                                                <div class="chat-content-{{ message.position }}">
+                                                    <!---->
+                                                    <p>{{ message.content }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="send-separator" />
+                            <div class="send-panel">
+                                <div class="msg-emoji"><img src="./assets/img/emoji.png" class="send-img"></div>
+                                <div class="msg-img"><img src="./assets/img/picture.png" class="send-img"></div>
+                                <div class="msg-input">
+                                    <div class="md-form">
+                                        <input name="chatContent" ng-model="chatContent" placeholder="说点什么呗" type="text" id="chatContent" class="form-control" required onkeypress="if(event.keyCode==13) {send_submit.click();return false;}" />
+                                    </div>
+                                </div>
+                                <div class="msg-send">
+                                    <button id="send_submit" class="btn peach-gradient btn-rounded msg-btn" ng-disabled="chatContent.$invalid" ng-click="postMessage()">发送</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./assets/lib/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/bootstrap/js/mdb.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/bootstrap/js/popper.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/socket.io.js"></script>
+        <script type="text/javascript" src="./assets/js/chat.js"></script>
+</body>
+
+</html>

@@ -112,7 +112,11 @@
 
 .chat-list {
 	height: 486px;
-	margin: 0 0 0 18px;
+	padding: 0 0 0 9px;
+}
+
+.chat-list .active {
+	background-color: #f7d2f1;
 }
 
 .list-img {
@@ -124,6 +128,16 @@
 .list-item {
 	height: 64px;
 	border-bottom: 1px solid rgb(195, 195, 195);
+}
+
+.list-item .chat-item {
+	margin: 0 0 0 9px;
+}
+
+.list-item:hover {
+	cursor: pointer;
+    background: rgba(246, 90, 91, 0.25);
+    transition: background 500ms;
 }
 
 .list-item .msg-num {
@@ -310,6 +324,22 @@
     border-color: transparent #B4F342 transparent transparent;
     float: left;
     margin: 13px 0 10px 0;
+}
+
+.msg-panel .system-notification .notification{
+	background-color: lightsalmon;
+	text-align: center;
+	color: #fff;
+	vertical-align: middle;
+	display: inline-block;
+	margin: 0 auto 20px 200px;
+	padding: 1px 5px;
+	box-shadow: 2px 2px 3px #aaaaaa;
+	border-radius: 3px;
+}
+
+.msg-panel .system-notification .notify-name {
+	color: #5A7DE9;
 }
 
 .chat-panel .send-separator {

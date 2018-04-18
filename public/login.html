@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChatRoom</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/lib/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/mdb.min.css">-->
+    <link rel="stylesheet" type="text/css" href="./assets/lib/bootstrap/css/compiled.min.css">
+    <script type="text/javascript" src="./assets/lib/angular.min.js"></script>
+</head>
+
+<body ng-app="">
+    <div class="row algin-items-center justify-content-center screen">
+        <div class="window editor fading">
+            <div class="header">
+                <span class="bullet bullet-red"></span>
+                <span class="bullet bullet-yellow"></span>
+                <span class="bullet bullet-green"></span>
+                <span class="title" id="chat-title">~/ChatRoom</span>
+            </div>
+            <div class="body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <!--Card-->
+                        <div class="chat-card">
+                            <div class="avatar"><img src="./assets/img/laptop.jpg" alt="avatar mx-auto white" class="img-circle">
+                            </div>
+                            <div class="chat-body">
+                                <!--Name-->
+                                <h4 class="card-title mt-1 text-center">Chat Room</h4>
+                                <hr>
+                                <!--Quotation-->
+                                <p class="description text-center"><i class="fa fa-quote-left"></i>Talk with anonymous person</p>
+                            </div>
+                        </div>
+                        <!--Card-->
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="accout">
+                            <div class="nickname">
+                                <!-- Material input -->
+                                <form name="nickname-form" novalidate>
+                                    <div class="name-form">
+                                        <div class="md-form">
+                                            <i class="fa fa-user prefix"></i>
+                                            <input name="nickname" type="text" id="nickname" class="form-control border-color" ng-minlength=2 ng-maxlength=6 required />
+                                            <label for="nickname" class="placeholder">Nick Name</label>
+                                        </div>
+                                        <div class="correct-nick" ng-show="nickname-form.nickname.$valid">
+                                            <img src="./assets/img/correct-symbol.png" class="validate-img">
+                                        </div>
+                                        <div class="error-nick" ng-show="nickname-form.ickname.$invalid">
+                                            <img src="./assets/img/error.png" class="validate-img">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="gender">
+                                <!-- Form inline with radios -->
+                                <form class="form-inline">
+                                    <div class="form-check">
+                                        <input class="form-check-input with-gap" type="radio" name="exampleRadios" id="exampleRadiosInline1" value="male" checked>
+                                        <label class="form-check-label gender-name" for="exampleRadiosInline1">
+                                            <i class="fa fa-mars gender-male"></i> male
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input with-gap" type="radio" name="exampleRadios" value="female" id="female">
+                                        <label class="form-check-label gender-name" for="female">
+                                            <i class="fa fa-venus gender-female"></i> femal
+                                        </label>
+                                    </div>
+                                </form>
+                                <!-- Form inline with radios -->
+                            </div>
+                            <div class="protocol">
+                                <!-- Default checkbox -->
+                                <div class="form-check">
+                                    <input class="form-check-input border-color" type="checkbox" value="" id="agree-check">
+                                    <label class="form-check-label service-name" for="agree-check">
+                                        I agree ChatRom Master Service Agreement
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit" id="submit">
+                                <button class="btn btn-primary btn-sm btn-block"><i class="fa fa-magic mr-1"></i> CREATE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./assets/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/bootstrap/js/mdb.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/bootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/validate.js"></script>
+</body>
+
+</html>
